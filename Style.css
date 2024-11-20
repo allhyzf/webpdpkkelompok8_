@@ -1,0 +1,1162 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header Section */
+.header-container {
+    background-color: #002f6c;
+    color: rgb(227, 231, 240);
+    padding: 15px 30px; /* Slightly more padding for a balanced, spacious look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .logo {
+    font-size: 22px; /* Increased font size for better visibility */
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+
+.header-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap for a more spacious, proportional look */
+}
+
+.header-container nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+.header-container nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    background-image: url('beautiful-nature-landscape-with-black-sandy-beach-ocean.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full viewport height */
+    color: rgb(252, 253, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-end; /* Align content to the right */
+    text-align: left; /* Align text to the right */
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-right: 50px; /* Add padding to the right to move content away from the edge */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Dark overlay on background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(39, 40, 107, 0.7); /* Darker overlay (increased opacity) */
+    z-index: -1; /* Ensure overlay stays behind the content */
+}
+/* style.css (Add this to your existing styles) */
+
+.project-slider {
+    position: relative;
+    max-width: 800px; /* Adjust as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.hero-content button {
+    background-color: #ffffffb3;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    color:  #002f6c;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #acbff5;
+}
+
+/* Mata Kuliah Section */
+.mata-kuliah {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: row; /* Ensures the layout is horizontal */
+    align-items: center; /* Vertically centers the image and text */
+    gap: 100px; /* Space between the image and text */
+}
+
+.mata-kuliah-image {
+    width: 50%; /* Takes up half of the section’s width */
+    height: 100%; /* Full height of the container */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.mata-kuliah h2 {
+    color: rgb(56, 54, 172);
+    font-size: 36px;
+    font-family: Oswald, sans-serif;
+    margin: 0 0 10px 0; /* Space below heading */
+}
+
+.mata-kuliah p {
+    font-size: 18px;
+    color: #555;
+    max-width: 600px;
+    margin: 0; /* Removes centering and extra bottom margin */
+    font-family: Arial, sans-serif;
+    line-height: 1.8; /* Improved readability */
+}
+.text-content {
+    max-width: 600px; /* Limits text width for readability */
+    text-align: left; /* Keeps text aligned to the left within the container */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px; /* Adjusted for smaller screens */
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .header-container {
+        padding: 10px 15px;
+    }
+
+    .mata-kuliah h2 {
+        font-size: 28px; /* Reduced for smaller screens */
+    }
+
+    .mata-kuliah p {
+        font-size: 16px;
+    }
+}
+/* style.css (Add this to your existing styles) */
+.project-slider {
+    position: relative;
+    width: 750px; /* Width of the slider */
+    height: 750px; /* Height of the slider */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: flex;
+    justify-content: center; /* Center content */
+    align-items: center; /* Center content */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.image-container {
+    position: relative; /* Position for overlay */
+    width: 100%; /* Ensure the container takes full width */
+    height: 100%; /* Ensure the container takes full height */
+}
+
+.slide img {
+    width: 100%; /* Ensure image fits within the slide */
+    height: auto; /* Allow height to adjust automatically */
+    max-height: 800px; /* Set a maximum height for the image */
+    object-fit: cover; /* Maintain aspect ratio and cover area */
+    border-radius: 10px; /* Optional: Add rounded corners to images */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    color: white; /* Text color */
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s; /* Smooth transition */
+    padding: 20px; /* Add padding for the text */
+    box-sizing: border-box; /* Include padding in width/height calculations */
+    text-align: center; /* Center text alignment */
+    font-size: 24px; /* Increased font size for project description */
+}
+
+.slide.active .overlay {
+    opacity: 1; /* Show overlay for active slide */
+}
+
+/* Assuming you have a class for the title "Our Project" */
+.title {
+    font-size: 36px; /* Increased font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 5px; /* Smaller button size */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 30px; /* Font size for buttons */
+}
+
+button.prev {
+    left: 10px; /* Adjust button position */
+}
+
+button.next {
+    right: 10px; /* Adjust button position */
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+/*project*/
+.team-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member{
+    flex:1 1 calc(33.333%-20px)
+}
+.services-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #ffffff;
+    background-image: url('beautiful-nature-landscape-with-black-sandy-beach-ocean.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.services-section h2 {
+    font-size: 40px;
+    color: #012350
+    margin-top: 98px; /* Adjusted for more space above */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    width: 20%; /* Adjust width to fit more items in a row */
+    min-height: 420px; /* Set a smaller height for the boxes */
+    background-color: #fff;
+    background-size: cover; /* Make background image cover the full item */
+    background-position: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column; /* Align content vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text horizontally */
+    position: relative; /* To allow overlay */
+}
+
+/* Dark overlay on the background image */
+.service-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Darken the background */
+    z-index: 1;
+}
+
+/* Content inside the .service-item */
+.service-content {
+    position: relative; /* Ensure content appears above the overlay */
+    z-index: 2;
+    color: rgb(9, 16, 109); /* Make text white for visibility */
+    padding: 20px;
+}
+
+.service-content h3 {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.service-content h4 {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.learn-more {
+    padding: 10px 15px;
+    background-color:  rgb(9, 16, 109);
+    color:  rgb(9, 16, 109);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #e09b00;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .service-item {
+        width: 40%; /* 2 items per row */
+        min-height: 250px; /* Adjust height */
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item {
+        width: 100%; /* 1 item per row on mobile */
+        min-height: 220px; /* Adjust height */
+    }
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+/* Project Detail Section */
+
+.project-detail {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px; /* Space between the two containers */
+    padding: 20px;
+    text-align: left;
+    justify-content: space-between; /* Align the content side by side */
+    position: relative; /* Ensure positioning context for child elements */
+}
+
+.project-detail-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack the text vertically */
+    background-color: rgb(239, 241, 252); /* Set the background color */
+    justify-content: center; /* Vertically center the text */
+    align-items: flex-end; /* Align text to the right horizontally */
+    padding: 20px; /* Add padding inside the container */
+    color: #050638;
+    text-align: right; /* Align the text to the left */
+    position: relative; /* Position it above the image */
+    z-index: 2; /* Ensure this container is in front of the image */
+    margin-top: 40px; /* Move the container down a bit */
+    width: 40%;
+    max-width: 40%;
+    height: 40%;
+    max-width: 60%; /* Optional: Limit the width of the container */
+}
+
+
+.project-image {
+    position: absolute; /* Place the image behind the text container */
+    top: 5%; /* Adjust this value to move the image lower */
+    left: 0;
+    width: 100%; /* Make the image full width */
+    height: 120%; /* Make the image full height of its container */
+    z-index: 1; /* Make sure the image stays behind the container */
+    display: flex;
+    justify-content: right; /* Center the image horizontally */
+    align-items: flex-end; /* Align the image to the bottom */
+    overflow: hidden; /* Prevent image overflow outside the container */
+}
+
+.project-image img {
+    width: 60%; /* Maintain the width */
+    height: 300%; /* Increase height for a taller image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Team Section */
+.team-section {
+    margin-top: 100px;
+    text-align: center;
+    color: #050638;
+
+}
+
+.team-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Keep the items centered horizontally */
+    gap: 20px;
+    align-items: center;
+}
+
+.team-member {
+    background-color: #fff;
+    width: 22%; /* Reduced the width of each team member item */
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member img {
+    width: 200px; /* Atur lebar gambar sesuai kebutuhan */
+    height: 200px; /* Atur tinggi gambar sesuai kebutuhan */
+    border-radius: 50%; /* Tetap bulat */
+    object-fit: cover; /* Pastikan gambar tetap proporsional */
+    margin-bottom: 10px;
+}
+
+.team-info h3 {
+    font-size: 18px;
+    color: #003366;
+}
+
+.team-info p {
+    color: #555;
+}
+.open {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 3px 0; /* Reduced space above and below names */
+
+}
+
+.open:hover {
+    background-color: #ff7f00;
+}
+/* Button container */
+.download-pdf, .back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.download-btn, .back-btn {
+    background-color: #ff7f00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 200px;
+    margin: 0 10px;
+}
+
+.download-btn:hover, .back-btn:hover {
+    background-color: #ff7f00;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+    .team-member {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-member {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%;
+    }
+
+    .download-btn, .back-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+/* General styles for body and page */
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header section */
+header {
+    background-color: #003366; /* Dark blue background */
+    color: white;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: hsl(48, 100%, 50%); /* Hover effect color */
+}
+
+/* Acara */
+body {
+    font-family: 'Oswald', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+/* Header Section */
+.header-container {
+    background-color: #003366;
+    color: rgb(227, 231, 240);
+    padding: 15px 30px; /* Slightly more padding for a balanced, spacious look */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .logo {
+    font-size: 22px; /* Increased font size for better visibility */
+    font-weight: 700;
+    font-family: Arial, sans-serif;
+}
+
+.header-container nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Increased gap for a more spacious, proportional look */
+}
+
+.header-container nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px; /* Slightly larger font size for better readability */
+}
+
+.header-container nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.detail-acara {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-detail-acara h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.project-image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.project-image-container img {
+    width: 80%; /* Makes the image take full width of its container */
+    max-width: 2000px; /* Set a maximum width for larger screens */
+    height: 1500;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Container for Profile and Interpretation aligned side-by-side */
+.profile-interpretation-container {
+    display: flex;
+    border: 10px  #003366; /* Adds a border around the box */
+    padding: 30px; /* Adds some space inside the box */
+    width: max-content;
+    background-color: #f9f9f9; /* Adds a light background color */
+    border-radius: 20%;
+}
+
+.profil-container {
+    margin-right: 20px; /* Adds space between the image and the text */
+}
+
+.profil-container img {
+    width: 80px; /* Adjust the image size */
+    height: 80px;
+    object-fit: cover; /* Ensures the image fits within the box */
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.interpretasi-container h4 {
+    margin: 5px 0; /* Adds space around the text */
+}
+
+.interpretasi-container p {
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: center;
+}
+.intepretasidata-container {
+    padding: 15px; /* Add padding for spacing */
+    margin: 20px 0; /* Margin to separate from other elements */
+    text-align: left; /* Center-align text within the container */
+}
+
+.intepretasidata-container h5 {
+    font-size: 20px; /* Font size for the heading */
+    color: #333; /* Dark text color */
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.intepretasidata-container p {
+    font-size: 20px; /* Font size for the paragraph */
+    color: #555; /* Slightly lighter text color for the paragraph */
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margin */
+}
+.author {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.author img {
+    border-radius: 50%;
+    margin-right: 15px;
+    width: 88px; /* Set width to match the example */
+    height: 88px; /* Set height to maintain the aspect ratio */
+}
+
+.author-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.author-info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+/* Download PDF */
+.download-pdf {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.download-btn {
+    padding: 10px 20px;
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #003366;
+}
+
+/* Back Button */
+.back-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-btn {
+    padding: 10px 20px;
+    background-color: #ff7f00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #003366;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #002f6c;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background: rgb(239, 241, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section .title {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section .title h2 {
+    position: relative;
+    font-size: 3rem;
+    color: rgb(9, 16, 109);
+    padding: 0 12px;
+}
+
+.section .title h2:before {
+    content: " ";
+    position: absolute;
+    height: 0;
+    width: 5px;
+    top: 0;
+    left: 0;
+    background: #eb8714;
+    animation: down 3s forwards;
+}
+
+@keyframes down {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+.section .title .arrows button {
+    background: transparent;
+    margin: 0px 15px;
+    border: 0;
+    border-radius: 12px;
+}
+
+.section .title .arrows button:hover i {
+    color: #000;
+}
+
+.section .title .arrows button:hover {
+    background: #fff;
+}
+
+.section .title .arrows button i {
+    padding: 10px 30px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 1.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+}
+
+/* section team members  */
+.section .team-members {
+    height: 520px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section .team-members .member-card1 {
+    position: relative;
+    height: 350px; /* Fixed height */
+    width: 300px; /* Fixed width */
+    border-radius: 26px;
+    margin: 0 12px;
+    overflow: hidden;
+    transition: 0.7s;
+}
+
+/* card icons  */
+.member-card1 .icons {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    top: 20%;
+    left: 10%;
+    transition: 1s;
+}
+
+.member-card1 .icons i {
+    padding: 6px 0;
+    margin: 4px 0;
+    color: #fff;
+    font-size: 1.1rem;
+    transform: rotate(-60deg);
+    transition: all 1s;
+}
+
+/* card icons end */
+.member-card1:hover .icons {
+    display: flex;
+}
+
+.member-card1:hover .icons i {
+    transform: rotate(0deg);
+    transition: all 1s;
+}
+
+.icons i:hover {
+    color: #eb8714;
+}
+
+.member-card1 img {
+    height: 100%; /* Fill the height of the card */
+    width: 100%; /* Fill the width of the card */
+    border-radius: 26px;
+    object-fit: cover; /* Ensure images cover the card area */
+    transition: all 1s ease;
+}
+
+/* content start  */
+.member-card1 .content {
+    position: absolute;
+    z-index: 1;
+    top: 72%;
+    left: 10%;
+}
+
+.member-card1 .content h2 {
+    color: rgb(9, 16, 109)
+    margin: 5px 0;
+}
+
+.section .team-members .member-card1 .content h3 {
+    color: rgb(9, 16, 109)
+    font-weight: 300;
+    font-weight: bold;
+}
+
+.section .team-members .member-card1:hover img {
+    transform: scale(1.1);
+}
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+@media(max-width:1024px){
+    .section .title{
+        flex-direction: column;
+    }
+    .section .title h2{
+        transition: 1s;
+        padding: 0px 18px;
+        margin: 45px 0;
+        font-size: 3.4rem;
+    }
+}
+@media(max-width:900px){
+    .section .title h2{
+        transition: 1s;
+        font-size: 3.6rem;
+    }
+}
+@media(max-width:768px){
+    .section .title h2{
+        transition: 1s;
+        font-size: 3.8rem;
+    }
+}
+@media(max-width:440px){
+    .section .title h2{
+        transition: 1s;
+        font-size: 3.5rem;
+    }
+    
+}
